@@ -1,0 +1,82 @@
+<mvc:View
+    controllerName="vendor.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" titleAlignment="Center" title="{i18n>title}">
+                   <content>
+                    <VBox class="sapUiSmallMargin">
+                        <f:SimpleForm id="SimpleFormDisplay354"
+                            editable="false"
+                            layout="ResponsiveGridLayout"
+                            
+                            labelSpanXL="3"
+                            labelSpanL="3"
+                            labelSpanM="3"
+                            labelSpanS="12"
+                            adjustLabelSpan="false"
+                            emptySpanXL="4"
+                            emptySpanL="4"
+                            emptySpanM="4"
+                            emptySpanS="0"
+                            columnsXL="1"
+                            columnsL="1"
+                            columnsM="1"
+                            singleContainerFullSize="false" >
+                            <f:content>
+                                <Label  text="{i18n>ListView.0001}" />
+                                <Text id="nameText" text="Industrias de tornillos De Mexico" />
+                                <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0002}" />
+                                <Input value="" showValueHelp="true" />
+                                <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0003}" />
+                                <Input value="" showValueHelp="true" />
+                                <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0004}" />
+                                <VBox>
+                                <Input  width="100%" value="" editable="false" />
+                                <HBox>
+                                <Text class="sapUiTinyMarginTop" text="{i18n>ListView.0012}"></Text>
+                                <Switch class="sapUiTinyMarginBegin" state="true" customTextOn="SI" customTextOff="No">
+                                    <layoutData>
+                                        <FlexItemData growFactor="1" />
+                                    </layoutData>
+                                </Switch>
+                            </HBox>
+                               </VBox>
+                               <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0005}" />
+                                <Input value="" showValueHelp="false" />
+                                <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0006}" />
+                                <Input value="" showValueHelp="false" />
+                                <Label class="sapUiTinyMarginTop" text="{i18n>ListView.0007}" />
+                                    <RadioButtonGroup select="onDateRangeSelect" id="rbg4" valueState="None">
+                                        <RadioButton id="RB4-1" text="{i18n>ListView.0008}" />
+                                        <RadioButton id="RB4-2" text="{i18n>ListView.0009}" />
+                                        <RadioButton id="RB4-3" text="{i18n>ListView.0010}" />
+                                        <RadioButton id="RB4-4" text="{i18n>ListView.0011}" />
+                                    </RadioButtonGroup>
+                                    <DateRangeSelection
+                                    id="DRS2"
+                                    change="handleChange"/>
+                        
+                            </f:content>
+                        </f:SimpleForm>
+                    </VBox>
+                   </content>
+                   <footer>
+                    <OverflowToolbar>
+                        <ToolbarSpacer/>
+                        
+                        <Button press="onDetailPress" text="{i18n>ListView.0013}" type="Emphasized" />
+                        <Button text="{i18n>ListView.0014}" />
+                    </OverflowToolbar>
+                </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

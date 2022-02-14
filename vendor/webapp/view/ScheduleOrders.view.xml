@@ -1,0 +1,182 @@
+<mvc:View controllerName="vendor.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <Shell id="shell">
+        <App>
+            <pages>
+                <Page navButtonPress="onNavToMasterPage" showNavButton="true" id="page" titleAlignment="Center" title="{i18n>title}">
+                    <content>
+                        <VBox class="sapUiSmallMargin">
+                            <f:Form id="FormChangeColumn_threeGroups234">
+
+
+                                <f:layout>
+                                    <f:ColumnLayout columnsM="2" columnsL="3" columnsXL="4" />
+                                </f:layout>
+                                <f:formContainers>
+                                    <f:FormContainer>
+                                        <f:formElements>
+                                            <f:FormElement label="{i18n>DetailView.0001}">
+                                                <f:fields>
+                                                    <DatePicker id="DP1" placeholder="Enter Date" change="handleChange" />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0005}">
+                                                <f:fields>
+                                                    <Input></Input>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0007}">
+                                                <f:fields>
+                                                    <Input></Input>
+                                                </f:fields>
+                                            </f:FormElement>
+
+                                            <f:FormElement label="{i18n>DetailView.0012}">
+                                                <f:fields>
+                                                    <TextArea value="" rows="5"></TextArea>
+                                                </f:fields>
+                                            </f:FormElement>
+                                        </f:formElements>
+                                    </f:FormContainer>
+                                    <f:FormContainer>
+                                        <f:formElements>
+                                            <f:FormElement label="{i18n>DetailView.0002}">
+                                                <f:fields>
+                                                    <DatePicker placeholder="Enter Date" change="handleChange" />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0006}">
+                                                <f:fields>
+                                                    <Input value="" />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0008}">
+                                                <f:fields>
+                                                    <Input></Input>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0011}">
+                                                <f:fields>
+                                                    <Input></Input>
+                                                </f:fields>
+                                            </f:FormElement>
+                                        </f:formElements>
+                                    </f:FormContainer>
+                                    <f:FormContainer>
+                                        <f:formElements>
+                                            <f:FormElement label="{i18n>DetailView.0004}">
+                                                <f:fields>
+                                                    <Switch state="true" customTextOn="Yes" customTextOff="No">
+                                                        <!-- <layoutData>
+                                                        <FlexItemData growFactor="1" />
+                                                    </layoutData> -->
+                                                    </Switch>
+
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0003}">
+                                                <f:fields>
+                                                    <TimePicker id="TP6" valueFormat="{/timePickers/TP6/format}" displayFormat="{/timePickers/TP6/format}" change="handleChange" support2400="{/timePickers/TP6/support2400}" maskMode="{= ${/maskMode/state} ? 'On' : 'Off'}" value="{/timePickers/TP6/value}" placeholder="{/timePickers/TP6/placeholder}" />
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0009}">
+                                                <f:fields>
+                                                    <ComboBox items="{
+                                                    path: '/CountriesCollection',
+                                                    sorter: { path: 'text' }
+                                                }">
+                                                        <core:Item key="{key}" text="{text}" />
+                                                    </ComboBox>
+                                                </f:fields>
+                                            </f:FormElement>
+                                            <f:FormElement label="{i18n>DetailView.0010}">
+                                                <f:fields>
+                                                    <Input></Input>
+                                                </f:fields>
+                                            </f:FormElement>
+                                        </f:formElements>
+                                    </f:FormContainer>
+                                </f:formContainers>
+                            </f:Form>
+                            <Table id="idProductsTable" inset="false" items="{
+                            path: '/ProductCollection',
+                            sorter: {
+                                path: 'Name'
+                            }
+                        }">
+                                <headerToolbar>
+                                    <OverflowToolbar>
+                                        <content>
+                                            <Title text="{i18n>DetailView.0013}" level="H3" />
+                                            <ToolbarSpacer />
+
+                                        </content>
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                              
+                                <columns>
+                                    <Column>
+                                        <Label text="{i18n>DetailView.0014}" />
+                                    </Column>
+                                    <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Label text="{i18n>DetailView.0015}" />
+                                    </Column>
+                                    <Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+                                        <Label text="{i18n>DetailView.0016}" />
+                                    </Column>
+                                    <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+                                        <Label text="{i18n>DetailView.0017}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Label text="{i18n>DetailView.0018}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Label text="{i18n>DetailView.0019}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Label text="{i18n>DetailView.0020}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Label text="{i18n>DetailView.0021}" />
+                                    </Column>
+                                    <Column hAlign="End">
+                                        <Label text="{i18n>DetailView.0022}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <ObjectIdentifier title="{Name}" text="{ProductId}" />
+                                            <ObjectIdentifier title="{Name}" text="{ProductId}" />
+                                            <Text text="{Width} x {Depth} x {Height} {DimUnit}" />
+                                            <Text text="{Width} x {Depth} x {Height} {DimUnit}" />
+                                            <Text text="{Width} x {Depth} x {Height} {DimUnit}" />
+                                            <ObjectNumber number="{WeightMeasure}" unit="{WeightUnit}"  />
+                                            <ObjectNumber number="{
+                                                parts:[{path:'Price'},{path:'CurrencyCode'}],
+                                                type: 'sap.ui.model.type.Currency',
+                                                formatOptions: {showMeasure: false}
+                                            }" unit="{CurrencyCode}" />
+                                            <ObjectNumber number="{
+                                                parts:[{path:'Price'},{path:'CurrencyCode'}],
+                                                type: 'sap.ui.model.type.Currency',
+                                                formatOptions: {showMeasure: false}
+                                            }" unit="{CurrencyCode}" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </VBox>
+                    </content>
+                    <footer>
+                        <OverflowToolbar>
+                            <ToolbarSpacer />
+
+                            <Button text="{i18n>DetailView.0023}" type="Emphasized" />
+                            <Button text="{i18n>DetailView.0024}" />
+                        </OverflowToolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
